@@ -11,7 +11,11 @@ bp = Blueprint('plan', __name__, url_prefix='/')
 #
 # def plan(start, end, breaks, fixed_tasks, prio_tasks):
 
-@bp.route('/', methods=('GET', 'POST'))
+@bp.route('/')
+def index():
+    return render_template("index.html")
+
+@bp.route('/dashboard', methods=('GET', 'POST'))
 def submit_task():
     if request.method == 'POST':
         # Time is in 24h format 00:00

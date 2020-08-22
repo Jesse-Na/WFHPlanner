@@ -22,8 +22,6 @@ def submit_task():
     else:
         return render_template("dashboard.html", tasks=[])
 
-        return render_template("dashboard.html")
-
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -31,12 +29,12 @@ def signup():
         password = request.form.get('password')
         confirm = request.form.get('confirm_password')
         if not email or not password or password != confirm:
-            return render_template("signup.html")
+            return render_template("auth/signup.html")
         else:
             return render_template("dashboard.html")
     else:
-        return render_template("signup.html")
+        return render_template("auth/signup.html")
 
 @app.route('/login')
 def login():
-    return render_template("login.html")
+    return render_template("auth/login.html")
