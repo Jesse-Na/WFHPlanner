@@ -15,7 +15,6 @@ numpy==1.18.4
 pipenv==2020.8.13
 PyInstaller==3.2.1
 pylint==2.6.0
-pypiwin32==220
 python-dotenv==0.14.0
 six==1.15.0
 toml==0.10.1
