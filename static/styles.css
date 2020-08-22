@@ -1,1 +1,4 @@
-
+.bootstrap-timepicker-meridian,
+.meridian-column {
+  display: none;
+}
