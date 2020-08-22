@@ -20,9 +20,18 @@ def submit_task():
 
         return render_template("index.html")
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template("signup.html")
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        confirm = request.form.get('confirm_password')
+        if not email or not password or password != confirm:
+            return render_template("signup.html")
+        else:
+            return render_template("index.html")
+    else:
+        return render_template("signup.html")
 
 @app.route('/login')
 def login():
