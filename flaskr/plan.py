@@ -21,6 +21,8 @@ def submit_task():
         # Time is in 24h format 00:00
         check_in_time = request.form['check_in']
         check_out_time = request.form['check_out']
+        lunch_start = request.form['lunch_start']
+        lunch_end = request.form['lunch_end']
         task_name = request.form['task_input']
         task_start = request.form['task_start']
         task_end = request.form['task_end']
