@@ -2,7 +2,11 @@ import ast
 from flask import Flask, render_template, request, url_for
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+def index():
+    return render_template("index.html")
+
+@app.route('/dashboard', methods=['GET', 'POST'])
 def submit_task():
     if request.method == 'POST':
         # Time is in 24h format 00:00
@@ -14,11 +18,11 @@ def submit_task():
         task_len = request.form['task_len']
         # task = new Task(task_name, ...)
         tasks = ast.literal_eval(request.form['task_lst']) + [request.form['task_input']]
-        return render_template("index.html", tasks=tasks)
+        return render_template("dashboard.html", tasks=tasks)
     else:
-        return render_template("index.html", tasks=[])
+        return render_template("dashboard.html", tasks=[])
 
-        return render_template("index.html")
+        return render_template("dashboard.html")
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -29,7 +33,7 @@ def signup():
         if not email or not password or password != confirm:
             return render_template("signup.html")
         else:
-            return render_template("index.html")
+            return render_template("dashboard.html")
     else:
         return render_template("signup.html")
 
