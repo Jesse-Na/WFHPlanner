@@ -9,7 +9,7 @@ isort==5.4.2
 itsdangerous==0.24
 Jinja2==2.11.2
 lazy-object-proxy==1.4.3
-MarkupSafe==1.0
+MarkupSafe==1.1.1
 mccabe==0.6.1
 numpy==1.18.4
 pipenv==2020.8.13
