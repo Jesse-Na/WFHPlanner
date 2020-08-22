@@ -13,7 +13,6 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 numpy==1.18.4
 pipenv==2020.8.13
-pygame==1.9.3
 PyInstaller==3.2.1
 pylint==2.6.0
 pypiwin32==220
