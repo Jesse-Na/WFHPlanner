@@ -29,6 +29,7 @@ def submit_task():
         task_len = request.form['task_len']
         # task = new Task(task_name, ...)
         tasks = ast.literal_eval(request.form['task_lst']) + [request.form['task_input']]
+        print(tasks)
         return render_template("dashboard.html", tasks=tasks)
     else:
         return render_template("dashboard.html", tasks=[])
