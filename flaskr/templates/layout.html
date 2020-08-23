@@ -14,9 +14,36 @@
             rel="stylesheet"
             href="{{ url_for('static', filename='styles.css') }}"
         />
+        <link rel="icon" href="../static/favicon.jpg" type="image/gif" sizes="16x16">
+        <!-- open graph protocol -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="WFHPlanner" />
+        <meta
+            property="og:description"
+            content="Take control of your life now with WFHPlanner"
+        />
+        <meta
+            property="og:image"
+            content="https://www.pngkit.com/png/full/365-3658927_illustration-of-a-calendar-payment.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <!-- twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="WFHPlanner" />
+        <meta
+            property="twitter:description"
+            content="Take control of your life now with WFHPlanner"
+        />
+        <meta
+            property="twitter:image"
+            content="https://www.pngkit.com/png/full/365-3658927_illustration-of-a-calendar-payment.png"
+        />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/"><img src="../static/favicon.jpg"/ height="32px" width="auto"></a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -30,7 +57,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav d-flex justify-content-between">
-                    <a class="nav-item nav-link" href="/">Home</a>
                     <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
                     <a class="nav-item nav-link" href="/auth/signup">Sign Up</a>
                     <a class="nav-item nav-link" href="/auth/login">Login</a>
