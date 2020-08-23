@@ -10,7 +10,11 @@
             type="time"
             class="form-control"
             id="check-in"
-            value=""
+            {% if 'check_in' in session %}
+                value={{ session['check_in'] }}
+            {% else %}
+                value=''
+            {% endif %}
           />
         </div>
         <div class="form-group">
@@ -20,7 +24,11 @@
             type="time"
             class="form-control"
             id="check-out"
-            value=""
+            {% if 'check_out' in session %}
+                value={{ session['check_out'] }}
+            {% else %}
+                value=''
+            {% endif %}
           />
         </div>
         <div class="form-group">
@@ -83,7 +91,7 @@
             value=""
           />
         </div>
-        <input name="task_lst" value="{{ tasks }}" type="hidden" />
+
         <button type="submit" class="btn btn-primary">Add</button>
       </form>
     </div>
@@ -92,8 +100,8 @@
       <h1>Hello</h1>
       <form action="/dashboard" method="DELETE">
         <div class="form-group">
-          {% for task in tasks: %}
-          <p>{{ task }}</p>
+          {% for task in schedule %}
+          <p>{{ task.name }}</p>
           {% endfor %}
         </div>
       </form>
