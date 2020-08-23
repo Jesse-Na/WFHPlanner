@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block body %}
-<div class="mt-5">
-    <div class="row py-5 px-5 justify-content-md-center">
-        <div class="col-sm-4">
+<div class="container-fluid">
+    <div class="row py-5 px-5 justify-content-sm-center align-items-center" style="height: 600px;">
+        <div class="col-md-4">
             <h1>WFHPlanner</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -11,16 +11,17 @@
                 Sign Up Now
             </a>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-md-4 text-center">
             <img
                 src="https://www.pngkit.com/png/full/365-3658927_illustration-of-a-calendar-payment.png"
-                width="300px"
+                width="60%"
                 height="auto"
+                style="min-width: 200px;"
             />
         </div>
     </div>
-    <div class="row bg-light py-5 px-5 text-center justify-content-md-center">
-        <div class="col-sm-8">
+    <div class="row bg-light py-5 px-5 text-center justify-content-sm-center">
+        <div class="col-md-8">
             <h5 class="text-primary">Lorem ipsum dolor</h5>
             <h1>Lorem ipsum dolor sit amet</h1>
             <p class="text-secondary">
@@ -29,12 +30,37 @@
             </p>
             <img
                 src="https://www.dynaway.com/hs-fs/hubfs/Illustration%20(39)%20%5BConverted%5D.png?width=4010&height=3475&name=Illustration%20(39)%20%5BConverted%5D.png"
-                width="300px"
+                width="60%"
                 height="auto"
                 class="mt-5"
+                style="max-width: 400px"
             />
         </div>
     </div>
-    <!-- <div class="py-5 text-center"></div> -->
+    <div class="row py-5 px-5 text-center justify-content-sm-center">
+        <div class="col-md-8">
+            <h5 class="text-primary">Lorem ipsum dolor</h5>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <img
+                src="https://www.dynaway.com/hs-fs/hubfs/Illustration%20(39)%20%5BConverted%5D.png?width=4010&height=3475&name=Illustration%20(39)%20%5BConverted%5D.png"
+                width="60%"
+                height="auto"
+                class="mt-5"
+                style="max-width: 400px"
+            />
+        </div>
+    </div>
+    <div class="row bg-dark py-5 px-5 text-center justify-content-sm-center">
+        <div class="col-sm-8">
+            <h1 class="text-white">Take Control Of Your Life Now</h1>
+            <a class="btn btn-outline-light mt-3" href="auth/signup" role="button">
+                Sign Up Now
+            </a>
+        </div>
+    </div>
 </div>
 {% endblock %}
